@@ -12,6 +12,9 @@ class City(BaseModel):
         verbose_name = "城市"
         verbose_name_plural = verbose_name
 
+    def __str__(self):
+        return self.name + "呵呵哒"
+
 class CourseOrg(BaseModel):
     name = models.CharField(max_length=50, verbose_name="用户名称")
     desc = models.TextField(verbose_name="描述")
